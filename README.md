@@ -1,2 +1,2 @@
 # Mynote
-Record technique
+Record technique note.
