@@ -1,0 +1,2 @@
+# Mynote
+Record technique
