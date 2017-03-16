@@ -50,6 +50,9 @@ sudo apt-get update
     - `git config --global user.name "John Doe“ `
     - `git config --global user.email “johndoe@example.com"`
 
+# Oh-My-Zsh
+- Install
+    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ## Chromium
 - Install
     - sudo apt-get chromium-browser
