@@ -1,16 +1,17 @@
-# 1. Dowmload related tools and change mirrors
-
-# Softwares Setup
+# 1. Softwares Setup
 ## Pre-installion
-- Create new user
-    - `sudo useradd yourname`
-    - `sudo passwd abc123_`
-- Configure sudoer
-    - `sudo chmod u+w /etc/sudoers`
-    - `sudo vim /etc/sudoers`
-    - add new line "yourname ALL=(ALL:ALL) ALL" to the end of the file
-    
+- create new user
+
+```shell
+ssh root@your_server_ip
+adduser username
+usermod -aG sudo username # aG means --apend --groups
 ```
+    
+- change sources to aliyun
+
+```
+# append the following to /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu trusty main restricted
 deb-src http://mirrors.aliyun.com/ubuntu trusty main restricted
 deb http://mirrors.aliyun.com/ubuntu trusty-updates main restricted
@@ -23,14 +24,12 @@ deb http://mirrors.aliyun.com/ubuntu trusty multiverse
 deb-src http://mirrors.aliyun.com/ubuntu trusty multiverse
 deb http://mirrors.aliyun.com/ubuntu trusty-updates multiverse
 deb-src http://mirrors.aliyun.com/ubuntu trusty-updates multiverse
-
 deb http://mirrors.aliyun.com/ubuntu trusty-backports main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu trusty-backports main restricted universe multiverse
+```
+```shell
 sudo apt-get update
 ```
-
-- Make sure home directory exists, if not create user home and make default.
-    - `ls /home/`
 
 ## Vim
 - Install
@@ -113,7 +112,7 @@ sudo apt-get install nginx
 
 - 2. Config nginx
 ```sh
-vi /etc/nginx/conf.d/baomi.conf
+vi /etc/nginx/conf.d/***.conf
 ```
 
 ## Setup Mongo
@@ -121,17 +120,7 @@ vi /etc/nginx/conf.d/baomi.conf
 ### Setup with pecl
 
 - 1. Install Mongo
-   - Follow the [setup guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/), and select the 2.6 version to install.
-
-- 2. procedure
-```
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
-echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
-sudo apt-get update
-sudo apt-get install -y mongodb-org
-sudo apt-get install -y mongodb-org=3.2.7 mongodb-org-server=3.2.7 mongodb-org-shell=3.2.7 mongodb-org-mongos=3.2.7 mongodb-org-tools=3.2.7
-sudo service mongod start
-```
+   - Follow the [setup guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
 
 ## Setup Redis
 
@@ -190,11 +179,3 @@ sudo apt-get install supervisor
 ```sh
 sudo vi /etc/supervisor/conf.d/supervisor.conf
 ```
-
-**Restart supervisor to make the configuration work**
-
-```sh
-sudo service supervisor {start|stop|restart|force-reload|status|force-stop}
-```
-
-
