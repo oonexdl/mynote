@@ -10,7 +10,7 @@ usermod -aG sudo username
 ```
     
 - change sources to aliyun
-
+```json
 # append the following to /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu trusty main restricted
 deb-src http://mirrors.aliyun.com/ubuntu trusty main restricted
@@ -26,6 +26,7 @@ deb http://mirrors.aliyun.com/ubuntu trusty-updates multiverse
 deb-src http://mirrors.aliyun.com/ubuntu trusty-updates multiverse
 deb http://mirrors.aliyun.com/ubuntu trusty-backports main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu trusty-backports main restricted universe multiverse
+```
 
 ```shell
 sudo apt-get update
@@ -33,11 +34,11 @@ sudo apt-get update
 
 ## Vim
 ```shell
-    sudo apt-get install vim
+sudo apt-get install vim
 
-    vim --version
-    export EDITOR=/usr/bin/vim (open ./bashrc or ./zshrc, add this to last line)
-    alias vi=/usr/bin/vim
+vim --version
+export EDITOR=/usr/bin/vim (open ./bashrc or ./zshrc, add this to last line)
+alias vi=/usr/bin/vim
 ```
     
 # Git
@@ -54,23 +55,23 @@ git config --global user.email "xiaodongli312@gmail.com"
 
 # Oh-My-Zsh
 ```shell
-    sudo apt-get install zsh
-    zsh --version # ensure more than 4.6.9
-    chsh -s $(which zsh) # change zsh to default shell
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo apt-get install zsh
+zsh --version # ensure more than 4.6.9
+chsh -s $(which zsh) # change zsh to default shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
     
 ## Chromium
 - Install
 ```shell
-    sudo apt-get chromium-browser
+sudo apt-get chromium-browser
 ```
 
 ## Chinese input method
 - Install
 ```shell
-    sudo apt-get install fcitx-pinyin
-    # install sougo linux
+sudo apt-get install fcitx-pinyin
+# install sougo linux
 ```
 
 # 2. fetch code
@@ -139,19 +140,19 @@ vi /etc/nginx/conf.d/***.conf
 
 ## Setup Redis
 
-1. Install Redis
+- Install Redis
 ```sh
 sudo apt-get install redis-server
 ```
 
 ## Setup SCSS
 
-- 1. Install ruby (version > 1.9.1)
+- Install ruby (version > 1.9.1)
 ```sh
 sudo apt-get install ruby
 ```
 
-- 2. Use mirror for ruby
+- Use mirror for ruby
 
 ```
 gem sources --remove http://rubygems.org/
@@ -163,7 +164,7 @@ https://ruby.taobao.org
 Ensure only ruby.taobao.org exists
 ```
 
-- 3. Install SASS
+- Install SASS
 ```sh
 sudo gem install sass
 ```
