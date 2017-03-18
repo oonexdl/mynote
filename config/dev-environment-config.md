@@ -52,7 +52,11 @@ sudo apt-get update
 
 # Oh-My-Zsh
 - Install
+    - sudo apt-get install zsh
+    - zsh --version # ensure more than 4.6.9
+    - chsh -s $(which zsh) # change zsh to default shell
     - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    
 ## Chromium
 - Install
     - sudo apt-get chromium-browser
@@ -84,7 +88,7 @@ phpbrew update
 - Install php5.6
 ```
 phpbrew install 5.6.13 +default+fpm
-phpbrew switch 5.6.13
+phpbrew switch 5.6.13-s
 phpbrew use 5.6.13
 phpbrew ext install gd
 phpbrew ext install mongo
