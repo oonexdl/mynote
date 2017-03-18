@@ -5,12 +5,12 @@
 ```shell
 ssh root@your_server_ip
 adduser username
-usermod -aG sudo username # aG means --apend --groups
+# aG means --apend --groups
+usermod -aG sudo username 
 ```
     
 - change sources to aliyun
 
-```
 # append the following to /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu trusty main restricted
 deb-src http://mirrors.aliyun.com/ubuntu trusty main restricted
@@ -26,49 +26,57 @@ deb http://mirrors.aliyun.com/ubuntu trusty-updates multiverse
 deb-src http://mirrors.aliyun.com/ubuntu trusty-updates multiverse
 deb http://mirrors.aliyun.com/ubuntu trusty-backports main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu trusty-backports main restricted universe multiverse
-```
+
 ```shell
 sudo apt-get update
 ```
 
 ## Vim
-- Install
-    - `sudo apt-get install vim`
-- Verify
-    - `vim --version`
-- Configuration
-    - `export EDITOR=/usr/bin/vim`(open ./bashrc or ./zshrc, add this to last line)
-    - `alias vi=/usr/bin/vim`
+```shell
+    sudo apt-get install vim
+
+    vim --version
+    export EDITOR=/usr/bin/vim (open ./bashrc or ./zshrc, add this to last line)
+    alias vi=/usr/bin/vim
+```
     
 # Git
-- Install
-    - `sudo apt-get install git`
-    - `sudo apt-get install git-gui`
-- Verify
-    - `git version`
-- Configure
-    - `git config --global user.name "John Doe“ `
-    - `git config --global user.email “johndoe@example.com"`
+```shell
+sudo apt-get install git
+sudo apt-get install git-gui
+
+git version
+
+# not use --global if just set in current repo
+git config --global user.name "xiaodongli312"
+git config --global user.email "xiaodongli312@gmail.com"
+```
 
 # Oh-My-Zsh
-- Install
-    - sudo apt-get install zsh
-    - zsh --version # ensure more than 4.6.9
-    - chsh -s $(which zsh) # change zsh to default shell
-    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```shell
+    sudo apt-get install zsh
+    zsh --version # ensure more than 4.6.9
+    chsh -s $(which zsh) # change zsh to default shell
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
     
 ## Chromium
 - Install
-    - sudo apt-get chromium-browser
+```shell
+    sudo apt-get chromium-browser
+```
 
 ## Chinese input method
 - Install
-    - `sudo apt-get install fcitx-pinyin`
-    - install sougo linux
+```shell
+    sudo apt-get install fcitx-pinyin
+    # install sougo linux
+```
 
 # 2. fetch code
-
-git clone git:  workspace
+```shell
+git clone -b develop repo -o work_dir
+```
 
 # 3. install phpbrew
 
