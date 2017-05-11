@@ -1,6 +1,6 @@
-# basic usage
+# Basic Usage
 
-### get images
+### Get Images
 
 1. config register-mirror to accelerate
 
@@ -18,7 +18,7 @@ DOCKER_OPTS="$DOCKER_OPTS --registry-mirror=${MIRROR}"
 docker pull ${REPOSITORY}:${LABEL}
 ```
 
-### manage images
+### Manage Images
 
 ```shell
 # list all images include intermediate layers only with numeric IDs
@@ -33,7 +33,7 @@ docker rmi ${IMAGEIDS}
 docker rmi $(docker images -q --filter dangling=true | head -n 10)
 ```
 
-### manage containers
+### Manage Containers
 
 ```shell
 # start a container with interactive terminal, which will be deleted after exit 
@@ -48,7 +48,7 @@ docker ps -a --format="{{ .Status }} {{ .Names }}" --filter exited=0
 # to be continued...
 ```
 
-### build and push images
+### Build and Push Images
 
 ```shell
 # use current dir for context and Dockerfile
