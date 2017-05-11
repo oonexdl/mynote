@@ -30,29 +30,46 @@ while (now - start <= 5000) {
 // event2 executed after 5001                                                                  
 // event1 executed after 5010 
 ``` 
-As we all know that js executes in single-thread, so how the example works ?
+As we all know that js executes in single-thread, so who is responsible for managing the timer callback?
 
-In fact, event driven consist of main execution thread, observer and I/O thread pool.
+In fact, participators consist of main execution thread, events queue, watcher and I/O thread pool.
 
-Observer is a role who checks whether there is pending works and send work to js thread for executation.
+#### Event Queue
 
-The thread selected from pool executes blocking I/O operation until it finished, and then send rest work(like callback) to observers.
+In browser, event means that user interact with GUI, network activity, timer.
+In os, event mostly come from `I/O`.
 
-See the pseudocode:
+Event queues are here for storing these events.
+
+#### Watcher 
+
+The Watcher is responsible for gathering events from os, and sent callback for main thread.
+In linux, watcher is implement by [libuv](https://nikhilm.github.io/uvbook/basics.html]) 
+
+In above example, event is timer. when timer is expired, it's put to events queue.
+Then corresponding callback is executed in next event loop. 
+
+See the event loop pseudocode:
 
 ```js
 while(true) {
-    works = getWorks();
-    if !works
+    event = getEvents();
+    if !events
         continue;
 
-    for work in works
-        if !work.isExpired
+    for event in events
+        if !event.work.isExpired
             continue;
-        sendToJsThread(work);
+        sendToJsThread(event.work);
 }
 ```
-See the above example again, `setTimeout` can be regarded as asynchronous `I/O`. When `I/O` finished, send works to corresponding observer.
-Observer send the work which is expired(after 1000, 500 and so on) to js execution thread.
 
-Js always executes in a single-thread, so the two asynchronous works executed after `while` function finished in 5000 ms.
+#### I/O thread pool
+
+In fact, none-blocking `I/O` is implemented by thread pool.
+
+When main thread request an asynchronous operation, like read file from disk.
+The operation is distributed to one of thread pool, then main thread return.
+But now the execution thread for `I/O` is **blocked**, waiting for kernel read file finished.
+After the operation finished, **watcher** gathers the corresponding event for event loop.
+Finally, the main thread executed the callback.
