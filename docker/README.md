@@ -1,8 +1,29 @@
+# Install
+
+As personal development, it's free to use Docker Community Edition(Docker CE).
+
+[install](https://docs.docker.com/engine/installation/linux/ubuntu/)
+
 # Basic Usage
 
 ### Get Images
 
 1. config register-mirror to accelerate
+
+docker version is higer than 1.10
+
+```shell
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://******.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+docker version is lower than 1.10
 
 ```shell
 MIRROR="url get from aliyun mirror" sudo echo """
@@ -44,8 +65,9 @@ docker rmi $(docker images -q --filter dangling=true | head -n 10)
 # --network set container network mode, host means using current Host
 docker run --it --rm -v localPath:containerPath -w currentWorkDir -p 9000:9001 -e MONGOURL=${MONGOURL} --network host ${IMAGE} bash
 # list all containers with exited code is 0, more detailed just `RFTM`
-docker ps -a --format="{{ .Status }} {{ .Names }}" --filter exited=0
-# to be continued...
+docker ps -a --format "{{ .Status }} {{ .Names }}" --filter exited=0
+# scan container detailt info
+docker inspect --format "{{ .Status }} {{ .Names }}" ${container}
 ```
 
 ### Build and Push Images
@@ -57,3 +79,11 @@ docker build --tag $(registry-host)/$(REPOSITORY):$(TAG) .
 docker push $(registry-host)/$(REPOSITORY):$(TAG)
 ```
 
+### Manage Volume
+
+```shell
+# show all volumes by docker management
+docker volume ls
+# remove all volumes not referenced with any containers
+docker prune
+```
