@@ -74,7 +74,8 @@ sudo apt-get chromium-browser
 - Install
 ```shell
 sudo apt-get install fcitx-pinyin
-# install sougo linux
+# download sougo linux from http://pinyin.sogou.com/linux/
+sudo dpkg -i sogoupinyin_(version)_amd64.deb
 ```
 
 # 2. fetch code
