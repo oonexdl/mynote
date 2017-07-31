@@ -204,3 +204,8 @@ sudo vi /etc/supervisor/conf.d/supervisor.conf
 ```shell
 ssh-keygen -t rsa -b 4096 -C "xiaodongli321@gmail.com"
 ```
+# 7. install terminator
+
+sudo add-apt-repository ppa:gnome-terminator # beta ppa:gnome-terminator/nightly
+sudo apt-get update
+sudo apt-get install terminator
