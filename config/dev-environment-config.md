@@ -206,6 +206,8 @@ ssh-keygen -t rsa -b 4096 -C "xiaodongli321@gmail.com"
 ```
 # 7. install terminator
 
+```shell
 sudo add-apt-repository ppa:gnome-terminator # beta ppa:gnome-terminator/nightly
 sudo apt-get update
 sudo apt-get install terminator
+```
