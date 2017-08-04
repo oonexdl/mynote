@@ -1,0 +1,3 @@
+[
+    { "keys": ["shift+enter"], "command": "insert", "args": {"characters": "\\LogHelper::info(__METHOD__, \"-----------------------\", []);\n"} }
+]

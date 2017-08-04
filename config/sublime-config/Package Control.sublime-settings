@@ -1,0 +1,38 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AngularJS",
+		"Babel",
+		"Better CoffeeScript",
+		"Bootstrap 3 Jade Snippets",
+		"CoffeeCompile",
+		"CoffeeScriptHaml",
+		"Emmet",
+		"Emmet Css Snippets",
+		"Git",
+		"GitGutter",
+		"GitHub Flavored Markdown Preview",
+		"JavaScriptNext - ES6 Syntax",
+		"JSX",
+		"knockdown",
+		"Markdown Extended",
+		"Monokai Extended",
+		"Package Control",
+		"Pretty JSON",
+		"Sass",
+		"SCSS",
+		"SCSS Compiler",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-jsxhint",
+		"Syntax Highlighting for Sass",
+		"Theme - Soda",
+		"Theme - Soda SolarizedDark",
+		"Vintageous",
+		"WakaTime"
+	]
+}
