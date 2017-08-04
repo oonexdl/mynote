@@ -1,0 +1,160 @@
+## Theory of relevance
+
+The weight of a term is determined by three factors:
+
+- Term frequency
+- Inverse document frequency
+- Field-length norm
+
+### Term Frequency
+
+How often does the term appear in the field? The more often, the more relevant.
+
+The term frequency is caculated as follows:
+
+```shell
+# frequency means the numbers of times the term appears in the document.
+tf(t in d) =  √frequency
+
+```
+
+You can disable term frequency in the field mapping:
+
+PUT /my_index
+
+```json
+{
+    "mapping": {
+        "doc": {
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "index_options: "docs"
+                }
+            }
+        }
+    }
+}
+
+```
+
+Set **index_options** to docs will disable term frequencies and term positions.
+Exact-value **not_analyzed** string fields use this setting by default.
+
+#### Inverse document frequency
+
+How often does the term appear in all documents in collection? The more often, the **lower** the weight.
+
+Such as terms like **and** or **the**, they appear in most documents but contribute little to relevance.
+
+The inverse document frequency is caculated as follows:
+
+```shell
+# numDocs = number of total documents
+# docFreq = number of documents that contain the term
+idf(t) = 1 + log( numDocs / (docFreq + 1))
+
+```
+
+### Field-length norm
+
+How long is the field? The shorter the field, the **higher** the weight.
+
+The field length norm is caculated as follows:
+
+```shell
+# numTerms = number of terms in the field
+norm(d) = 1 / √numTerms
+
+```
+
+You can disable norms on **analyzed** field as well:
+
+PUT /my_index
+
+```json
+{
+    "mapping": {
+        "doc": {
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "norm: { "enabled": false }
+                }
+            }
+        }
+    }
+}
+```
+
+So a long field and a short field will be scored as if they were the same length. 
+
+### Putting it together 
+
+See following simple term query:
+
+PUT /my_index/doc/1
+
+```json
+{ "text" : "quick brown fox" }
+```
+
+GET /my_index/doc/_search?explain
+
+```json
+{
+  "query": {
+    "term": {
+      "text": "fox"
+    }
+  }
+}
+```
+
+The explanation is as follows:
+
+```
+weight(text:fox in 0) [PerFieldSimilarity]:  0.15342641 
+result of:
+    fieldWeight in 0                         0.15342641
+    product of:
+        // √1
+        tf(freq=1.0), with freq of 1:        1.0
+        // 1 + log(1/(1+1)) = 1 - log2
+        idf(docFreq=1, maxDocs=1):           0.30685282
+        // 1 / √3
+        fieldNorm(doc=0):                    0.5
+``` 
+
+Queries usually consist if more than one term, so we need a way of combining the weights of multiple terms.
+
+### Vector Space Model
+
+A vector is a dimensional array containing number:
+
+[1, 2, 5, 22, 3, 8]
+
+In the vector space model, each number in the vector is weight of term, caculated by tf/idf.
+
+
+Assume that we have a query for "happy hippopotamus".
+
+Common word **happy** have a low wight 2, while uncommon word **happopotmus** 5. 
+
+![Query vector](./vector_1.png)
+
+Assume we have three documents:
+
+1. I am **happy** in summer.
+2. After Christmas I'm a **hippopotamus**.
+3. The **happy** **hippopotamus** helped Harry.
+
+Document 1: (happy,____________)—[2,0]
+
+Document 2: ( ___ ,hippopotamus)—[0,5]
+
+Document 3: (happy,hippopotamus)—[2,5]
+
+![Query and document vectors](./vector_2.png)
+
+By measuring the angle between the query vector and the document vector, it is possible to assign a relevance score to each document.
