@@ -123,4 +123,24 @@ db.foo.insert({name: "foo"})
 - userAdmin 仅当作用于 `admin` 数据库 
 - userAdminAnyDatabase 
 
+### root 角色
+
+拥有以下所有角色
+
+- readWriteAnyDatabase
+- dbAdminAnyDatabase
+- userAdminAnyDatabase
+- clusterAdmin
+- restore
+- backup
+
+注:
+
+对于 mongodb 而言, role = { role: "readWrite", db: "test" } 等同于 **readWrite@test**
+
+换言之， 角色对象中的 role 必须属于数据库 test
+
+因此类似 role = { role: "root", db: "test" } 是不合法的, root 角色仅属于 admin, 即 **root@admin**
+
+
 更多 roles 见: https://docs.mongodb.com/manual/reference/built-in-roles/
