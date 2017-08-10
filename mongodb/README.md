@@ -79,6 +79,7 @@ db.createUser(
 
 ```shell
 mongo -u "tester" -p "abc123" --authenticationDatabase "test"
+# mongo test -u "tester" -p "abc123" 
 ```
 
 - 连接后授权
