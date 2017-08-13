@@ -153,7 +153,7 @@ sudo apt-get install redis-server
 
 - Install ruby (version > 1.9.1)
 ```sh
-sudo apt-get install ruby
+sudo apt-get install ruby ruby-all-dev
 ```
 
 - Use mirror for ruby
