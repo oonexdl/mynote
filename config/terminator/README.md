@@ -3,5 +3,5 @@
 ## usage
 
 ```shell
-ln -sf $(pwd)/config $HOME/.config/terminator/config
+./setup.sh
 ```

@@ -1,4 +1,4 @@
-# 1. Softwares Setup
+# 1. Softwares Install
 ## Pre-installion
 - create new user
 
@@ -210,3 +210,11 @@ sudo add-apt-repository ppa:gnome-terminator # beta ppa:gnome-terminator/nightly
 sudo apt-get update
 sudo apt-get install terminator
 ```
+
+# 2. Softwares configuration
+
+```shell
+./setup.sh
+```
+
+enjoy it!
