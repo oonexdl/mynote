@@ -177,8 +177,7 @@ sudo gem install sass
 
 - 1. Install nodejs
 ```sh
-curl https://raw.githubusercontent.com/creationix/nvm/v0.25.1/install.sh | bash
-. ~/.profile
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install v0.12.2
 nvm use 0.12.2
 ```
