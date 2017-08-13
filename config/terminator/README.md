@@ -3,5 +3,5 @@
 ## usage
 
 ```shell
-ln -sf config $HOME/.config/terminator/config
+ln -sf $(pwd)/config $HOME/.config/terminator/config
 ```
