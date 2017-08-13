@@ -5,13 +5,59 @@
 [keybindings]
 [layouts]
   [[default]]
-    [[[child1]]]
-      parent = window0
-      profile = solarized-dark
-      type = Terminal
-    [[[window0]]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 1d8b6f7f-da09-4185-ba87-f1f189134534
+      last_active_window = True
+      maximised = True
+      order = 0
       parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = seasons@seasonspc: ~
       type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 525
+      ratio = 0.5
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 924
+      ratio = 0.499730458221
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 1086
+      ratio = 0.587061994609
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = 5b3996f3-fb1e-48ae-8b87-c29d54c17b98
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = af5b6298-b519-43a1-9dfc-94362b7033d2
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 1d8b6f7f-da09-4185-ba87-f1f189134534
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 99b294fb-f8ba-4656-9bfc-82dd6faf61bb
 [plugins]
 [profiles]
   [[default]]
@@ -22,15 +68,3 @@
     foreground_color = "#eee8d5"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#586e75:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
-  [[solarized-dark]]
-    background_color = "#002b36"
-    background_image = None
-    cursor_color = "#eee8d5"
-    foreground_color = "#eee8d5"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#586e75:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-  [[solarized-light]]
-    background_color = "#eee8d5"
-    background_image = None
-    cursor_color = "#002b36"
-    foreground_color = "#002b36"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
