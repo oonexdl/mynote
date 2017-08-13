@@ -236,7 +236,7 @@ sudo apt-get update
 sudo apt-get install terminator
 ```
 
-# 2. Softwares configuration
+# 8. Softwares configuration
 
 ```shell
 ./setup.sh
