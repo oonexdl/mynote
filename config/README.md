@@ -8,8 +8,33 @@ adduser username
 # aG means --apend --groups
 usermod -aG sudo username 
 ```
-    
+
+- install ssh-server
+
+```shell
+sudo apt-get install openssh-server mailutils
+```    
+
+```json
+# append the following to /etc/hosts.allow
+# /etc/hosts.allow: list of hosts that are allowed to access the system.
+#                   See the manual pages hosts_access(5) and hosts_options(5).
+#
+# Example:    ALL: LOCAL @some_netgroup
+#             ALL: .foobar.edu EXCEPT terminalserver.foobar.edu
+#
+# If you're going to protect the portmapper use the name "rpcbind" for the
+# daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
+#
+sshd : ALL: spawn (echo "security notice from host $(/bin/hostname)" ;\
+echo; /usr/sbin/safe_finger @%h ) | \
+/usr/bin/mail -s "ip-%h dennis security warning!!!" seasons521@126.com \
+: allow
+
+```
+
 - change sources to aliyun
+
 ```json
 # append the following to /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu trusty main restricted
