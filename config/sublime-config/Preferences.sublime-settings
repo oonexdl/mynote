@@ -4,7 +4,6 @@
 	"font_size": 13,
 	"ignored_packages":
 	[
-		"JavaScriptNext - ES6 Syntax",
 		"Vintage"
 	],
 	"rulers":
