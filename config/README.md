@@ -226,7 +226,9 @@ sudo vi /etc/supervisor/conf.d/supervisor.conf
 
 # 6. generate ssh keys
 ```shell
-ssh-keygen -t rsa -b 4096 -C "xiaodongli321@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "xiaodongli312@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
 ```
 # 7. install terminator
 
