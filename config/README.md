@@ -136,6 +136,20 @@ phpbrew fpm start
 
 # 4. install nginx， sublime
 
+## Setup xdebug
+
+add following lines to php.ini
+```
+[xdebug]
+xdebug.remote_enable = 1
+xdebug.remote_host = "127.0.0.1"
+xdebug.remote_port = 9003
+xdebug.remote_handler = "dbgp"
+xdebug.remote_mode = req
+xdebug.remote_connect_back = 1
+xdebug.remote_autostart = 1
+```
+
 ## Install sublime text plugin for editorconfig
 
 [Setup Guide](https://github.com/sindresorhus/editorconfig-sublime#readme)
