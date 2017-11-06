@@ -229,11 +229,16 @@ sudo npm install -g grunt-cli
 # 5. install supervisor
 
 - 1. Install supervisor
-```sh
-sudo apt-get install supervisor
-```
 
+  download from [pypi](https://pypi.python.org/pypi/supervisor)
+  unpacking the software archive, run 
+  
+  ```sh
+  python setup.py install
+  ```
+  
 - 2. Config supervisor
+
 ```sh
 sudo vi /etc/supervisor/conf.d/supervisor.conf
 ```
