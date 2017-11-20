@@ -68,8 +68,7 @@ alias vi=/usr/bin/vim
     
 # Git
 ```shell
-sudo apt-get install git
-sudo apt-get install git-gui
+sudo apt-get install git git-gui git-extras
 
 git version
 
