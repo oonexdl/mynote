@@ -255,8 +255,15 @@ sudo add-apt-repository ppa:gnome-terminator # beta ppa:gnome-terminator/nightly
 sudo apt-get update
 sudo apt-get install terminator
 ```
+# 8. install tldr
 
-# 8. Softwares configuration
+```sh
+sudo curl -o /usr/local/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
+sudo chmod +x /usr/local/bin/tldr
+```
+then try `tldr tar`
+
+# Softwares configuration
 
 ```shell
 ./setup.sh
