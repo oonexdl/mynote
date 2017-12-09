@@ -69,7 +69,13 @@ wget http://fybbs.u.qiniudn.com/SwitchyOmega.crx
 wget http://fybbs.u.qiniudn.com/OmegaOptions1080.bak
 # restore from this file
 ```
+## install shadowsocks-qt5
 
+```sh
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+```
 ## install input method
 
 ```shell
