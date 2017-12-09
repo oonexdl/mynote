@@ -69,6 +69,25 @@ wget http://fybbs.u.qiniudn.com/SwitchyOmega.crx
 wget http://fybbs.u.qiniudn.com/OmegaOptions1080.bak
 # restore from this file
 ```
+## install shadowsocks-client
+
+```sh
+sudo pip install shadowsocks
+sudo apt-get install shadowsocks-libev
+sudo sslocal -c config.json -d start
+```
+config.json
+```json
+{
+  "server":"server_name",
+  "server_port":8000,
+  "local_port":1080,
+  "password":"******",
+  "timeout":600,
+  "method":"aes-256-cfb"
+}
+```
+
 ## install shadowsocks-qt5
 
 ```sh
