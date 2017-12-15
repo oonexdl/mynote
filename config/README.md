@@ -5,14 +5,14 @@
 ssh root@your_server_ip
 adduser username
 # aG means --apend --groups
-usermod -aG sudo username 
+usermod -aG sudo username
 ```
 
 - config ssh-server
 
 ```shell
 sudo apt-get install openssh-server mailutils
-```    
+```
 ```json
 # append the following to /etc/hosts.allow
 
@@ -30,7 +30,7 @@ vim --version
 export EDITOR=/usr/bin/vim (open ./bashrc or ./zshrc, add this to last line)
 alias vi=/usr/bin/vim
 ```
-    
+
 ## install git
 ```shell
 sudo apt-get install git git-gui git-extras
@@ -55,7 +55,7 @@ zsh --version # ensure more than 4.6.9
 chsh -s $(which zsh) # change zsh to default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-    
+
 ## install chromium
 
 ```shell
@@ -130,6 +130,8 @@ curl www.google.com
 sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt-get update
 sudo apt-get install wireshark
+sudo gpasswd -a $USER wireshark
+# logout and login
 ```
 ## install shadowsocks-qt5
 
@@ -248,12 +250,12 @@ sudo npm install -g grunt-cli
 - install
 
   download from [pypi](https://pypi.python.org/pypi/supervisor)
-  unpacking the software archive, run 
+  unpacking the software archive, run
   
   ```sh
   python setup.py install
   ```
-  
+
 - config
 
 ```sh
