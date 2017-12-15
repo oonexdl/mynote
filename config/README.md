@@ -87,6 +87,43 @@ config.json
   "method":"aes-256-cfb"
 }
 ```
+## install polipo and set global proxy
+
+- install
+
+```sh
+sudo apt-get install polipo
+```
+- config
+
+```sh
+vim /etc/polipo/config
+```
+```json
+logSyslog = true
+logFile = /var/log/polipo/polipo.log
+proxyAddress = "0.0.0.0"
+socksParentProxy = "127.0.0.1:1080"
+socksProxyType = socks5
+chunkHighMark = 50331648
+objectHighMark = 16384
+serverMaxSlots = 64
+serverSlots = 16
+serverSlots1 = 32
+```
+- restart
+
+```sh
+sudo /etc/init.d/polipo restart
+```
+
+- test
+
+```sh
+export http_proxy="http://127.0.0.1:8123/"
+
+curl www.google.com
+```
 
 ## install shadowsocks-qt5
 
@@ -229,11 +266,6 @@ ssh-add ~/.ssh/id_rsa
 sudo add-apt-repository ppa:gnome-terminator # beta ppa:gnome-terminator/nightly
 sudo apt-get update
 sudo apt-get install terminator
-```
-## install polipo
-
-```sh
-sudo apt-get install polipo
 ```
 ## install tldr
 
