@@ -124,7 +124,13 @@ export http_proxy="http://127.0.0.1:8123/"
 
 curl www.google.com
 ```
+## install wireshark
 
+```sh
+sudo add-apt-repository ppa:wireshark-dev/stable
+sudo apt-get update
+sudo apt-get install wireshark
+```
 ## install shadowsocks-qt5
 
 ```sh
@@ -134,7 +140,7 @@ sudo apt-get install shadowsocks-qt5
 ```
 ## install input method
 
-```shell
+```sh
 sudo apt-get install fcitx-pinyin
 # download sougo linux from http://pinyin.sogou.com/linux/
 sudo dpkg -i sogoupinyin_(version)_amd64.deb
