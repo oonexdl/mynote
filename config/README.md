@@ -73,7 +73,6 @@ wget http://fybbs.u.qiniudn.com/OmegaOptions1080.bak
 
 ```sh
 sudo pip install shadowsocks
-sudo apt-get install shadowsocks-libev
 sudo sslocal -c config.json -d start
 ```
 config.json
