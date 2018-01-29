@@ -73,6 +73,7 @@ wget http://fybbs.u.qiniudn.com/OmegaOptions1080.bak
 
 ```sh
 sudo pip install shadowsocks
+# if blocked see https://github.com/shadowsocks/shadowsocks/pull/659
 sudo sslocal -c config.json -d start
 ```
 config.json
