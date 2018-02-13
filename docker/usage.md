@@ -10,7 +10,7 @@ As personal development, it's free to use Docker Community Edition(Docker CE).
 
 1. config register-mirror to accelerate
 
-[aliyun console](cr.console.aliyun.com)
+[aliyun console](https://cr.console.aliyun.com)
 
 docker version is higer than 1.10
 
