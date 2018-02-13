@@ -47,6 +47,7 @@ docker pull ${REPOSITORY}:${LABEL}
 # list all images include intermediate layers only with numeric IDs
 docker images -aq
 # filter images with unused images
+# more filter in https://docs.docker.com/edge/engine/reference/commandline/images/#filtering
 docker images --filter dangling=true
 # list images with pretty format
 docker images --format "{{ .ID | .Repository | .Tag | .Size }}"
@@ -59,7 +60,7 @@ docker rmi $(docker images -q --filter dangling=true | head -n 10)
 ### Manage Containers
 
 ```shell
-# start a container with interactive terminal, which will be deleted after exit 
+# start a container with interactive terminal, which will be deleted after exit
 # -v mount local file system to container
 # -w set current workDir
 # -p map container port to current host port
