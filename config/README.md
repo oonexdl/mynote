@@ -73,8 +73,14 @@ wget http://fybbs.u.qiniudn.com/OmegaOptions1080.bak
 
 ```sh
 sudo pip install shadowsocks
+
+# exec in vps
+sudo ssserver -c config.json -d start
+
+# exec in local machine
 # if blocked see https://github.com/shadowsocks/shadowsocks/pull/659
 sudo sslocal -c config.json -d start
+
 ```
 config.json
 ```json
