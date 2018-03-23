@@ -1,3 +1,6 @@
+date: 20171111
+tags: auth,nosql
+---
 ## Auth
 
 启动一个新的 mongodb(3.4) 实例后，需要创建管理员用户并激活授权机制。
