@@ -86,8 +86,10 @@ config.json
 ```json
 {
   "server":"server_name",
-  "server_port":8000,
+  "server_port":8400,
   "local_port":1080,
+  // listen on any address, others can use proxy by your IP
+  "local_address": "0.0.0.0", 
   "password":"******",
   "timeout":600,
   "method":"aes-256-cfb"
