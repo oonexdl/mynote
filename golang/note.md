@@ -1,3 +1,5 @@
+(本文来源于 https://github.com/golang/go/wiki/CommonMistakes/_history，鉴于一些不负责的 dev 在未经测试的情况下随意修改，copy 了一份自己维护)
+
 Table of Contents
 =================
 
