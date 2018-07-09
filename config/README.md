@@ -291,6 +291,14 @@ sudo chmod +x /usr/local/bin/tldr
 ```
 then try `tldr tar`
 
+## install autojump
+
+```sh
+git clone git://github.com/joelthelion/autojump.git
+cd autojump
+./install.py or ./uninstall.py
+```
+
 ## configure software
 
 ```shell
