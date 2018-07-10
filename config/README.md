@@ -205,6 +205,10 @@ sudo apt-get install sublime-text
 ```
 [Setup Guide](https://github.com/sindresorhus/editorconfig-sublime#readme)
 
+## install vscode
+
+[link](https://code.visualstudio.com/docs/?dv=linux64_deb)
+
 ## install nginx
 
 ```sh
