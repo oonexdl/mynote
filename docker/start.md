@@ -80,6 +80,9 @@ docker inspect --format "{{ .Status }} {{ .Names }}" ${container}
 # image names
 docker build --tag $(registry-host)/$(REPOSITORY):$(TAG) .
 docker push $(registry-host)/$(REPOSITORY):$(TAG)
+
+# build image after http proxy, gfw you know...
+docker build -build-arg http_proxy=http://my.proxy.url --tag $(registry-host)/$(REPOSITORY):$(TAG) .
 ```
 
 ### Manage Volume
