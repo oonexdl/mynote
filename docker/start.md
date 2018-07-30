@@ -4,6 +4,12 @@ As personal development, it's free to use Docker Community Edition(Docker CE).
 
 [install](https://docs.docker.com/engine/installation/linux/ubuntu/)
 
+Ensure use docker without sudo
+
+```
+sudo usermod -aG docker ${USER}
+```
+
 # Basic Usage
 
 ### Get Images
