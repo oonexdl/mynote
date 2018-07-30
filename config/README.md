@@ -50,7 +50,7 @@ git clone -b develop repo -o work_dir
 
 ## install Oh-My-Zsh
 ```shell
-sudo apt-get install zsh
+sudo apt-get install zsh curl
 zsh --version # ensure more than 4.6.9
 chsh -s $(which zsh) # change zsh to default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
