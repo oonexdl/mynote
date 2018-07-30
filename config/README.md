@@ -71,6 +71,8 @@ wget http://fybbs.u.qiniudn.com/OmegaOptions1080.bak
 ```
 ## install shadowsocks-client
 
+python version:
+
 ```sh
 sudo pip install shadowsocks
 
@@ -80,8 +82,15 @@ sudo ssserver -c config.json -d start
 # exec in local machine
 # if blocked see https://github.com/shadowsocks/shadowsocks/pull/659
 sudo sslocal -c config.json -d start
+```
+go version:
+
+download release bin from https://github.com/shadowsocks/shadowsocks-go/releases
 
 ```
+shadowsocks-local -c config.json & disown
+```
+
 config.json
 ```json
 {
