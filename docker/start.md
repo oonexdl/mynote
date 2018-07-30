@@ -1,4 +1,4 @@
-# Install
+# Install Docker
 
 As personal development, it's free to use Docker Community Edition(Docker CE).
 
@@ -10,6 +10,12 @@ Ensure use docker without sudo
 sudo usermod -aG docker ${USER}
 ```
 
+# Install Docker-compose
+
+```
+sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
 # Basic Usage
 
 ### Get Images
