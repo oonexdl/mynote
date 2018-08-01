@@ -1,8 +1,14 @@
 {
-    "workbench.iconTheme": "vscode-icons",
-    "http.proxy": "http://127.0.0.1:8123/",
-    "editor.fontSize": 15,
     "workbench.colorTheme": "Monokai",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "http.proxy": "http://127.0.0.1:8123/",
     "go.lintTool": "gometalinter",
-    "go.lintFlags": ["--disable=all", "--enable=errcheck"]
+    "go.lintFlags": [
+        "--disable=all",
+        "--enable=errcheck"
+    ],
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 16
 }
