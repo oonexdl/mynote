@@ -3,7 +3,7 @@
 
 + [php 中的生成器](#generator)
 + [yii2 behaviors 如何实现对 component 属性，方法的注入](#yii2-behaviors)
-+ [yii2 的错误处理](#yii2-hanlder)
++ [yii2 的错误处理](#yii2-handler)
 
 # generator
 
