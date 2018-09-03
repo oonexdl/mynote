@@ -312,6 +312,12 @@ cd autojump
 ./install.py or ./uninstall.py
 ```
 
+## install jq
+
+```sh
+wget https://github.com/stedolan/jq/releases/XXXXX
+sudo mv jq-linux64 /usr/local/bin/jq
+```
 ## configure software
 
 ```shell
