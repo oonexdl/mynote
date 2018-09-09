@@ -74,7 +74,9 @@ db.createUser(
 
 此时 `tester` 账户拥有数据库 `test` `test2` 的读写权。
 
-注: 为何在 `test` 中创建的账户可以授予 **test2** 的读写权？
+问题来了，`tester` 用户属于 `test` 数据库，为何有 `test2` 数据库的读写权？
+
+其实从客户端的角度来讲，就是通过 tester 用户到 test 数据库的链接，可以同时访问 test2(这种灵活性的意义何在???)
 
 ### 用其他账户连接 mongod
 
