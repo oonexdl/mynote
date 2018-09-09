@@ -1,0 +1,10 @@
+{
+  "datacenter": "east-aws",
+  "data_dir": "/data/consul",
+  "log_level": "INFO",
+  "node_name": "master",
+  "server": true,
+  "bind_addr": "192.168.222.222",
+  "client_addr": "192.168.222.222",
+  "bootstrap":true
+}
