@@ -6,9 +6,10 @@
     "http.proxy": "http://127.0.0.1:8123/",
     "go.lintTool": "gometalinter",
     "go.lintFlags": [
-        "--disable=all",
-        "--enable=errcheck"
+        "--disable=all"
     ],
     "workbench.iconTheme": "vscode-icons",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "go.lintOnSave": "off",
+    "go.formatTool": "gofmt"
 }
