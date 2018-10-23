@@ -24,7 +24,7 @@ print("endAt: "+Date());
 cursor.close();
 ```
 
-在 mongo shell 种执行
+执行
 ```
 mongo $DATABASE -uroot -proot --eval "var my_var='$GOPATH'" iterate.js
 ```
