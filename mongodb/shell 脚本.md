@@ -3,6 +3,7 @@
 + [快速开始](https://docs.mongodb.com/manual/reference/mongo-shell/#basic-shell-javascript-operations)
 + [如何遍历文档](https://docs.mongodb.com/manual/tutorial/iterate-a-cursor/index.html)
 + [Javascript Api](https://docs.mongodb.com/manual/reference/method/)
++ [內建方法](https://docs.mongodb.com/manual/reference/method/js-native/)
 
 # 示例
 
