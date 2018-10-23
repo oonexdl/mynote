@@ -1,6 +1,6 @@
 # 示例
 
-// iterate.js
+iterate.js
 ```js
 print("my_var: ", my_var);
 
@@ -18,7 +18,7 @@ print("endAt: "+Date());
 cursor.close();
 ```
 
-// 在 mongo shell 种执行
+在 mongo shell 种执行
 ```
 mongo $DATABASE -uroot -proot --eval "var my_var='$GOPATH'" iterate.js
 ```
