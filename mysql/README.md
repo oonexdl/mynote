@@ -19,3 +19,5 @@ source path_sql_file;
 ```
 
 # Import Data by mysqlimport
+
+https://dev.mysql.com/doc/refman/8.0/en/mysqlimport.html#option_mysqlimport_local
