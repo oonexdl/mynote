@@ -21,6 +21,7 @@
 mkdir $HOME/letsencrypt
 
 docker run -it \
+    -p 80:80 \
     -v $HOME/letsencrypt:/etc/letsencrypt \
     certbot/certbot certonly \
     --standalone \
