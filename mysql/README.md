@@ -15,7 +15,7 @@ docker exec -it mysql mysql -uroot -p
 ```mysql
 CREATE DATABASE XXXX;
 use XXXX;
-source path_sql_file;
+SET autocommit=0;source the_sql_file.sql;COMMIT;
 ```
 
 # Import Data by mysqlimport
