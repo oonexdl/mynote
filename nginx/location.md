@@ -1,4 +1,4 @@
-## location 模块的匹配原则
+# location 模块的匹配原则
 
 来源 http://nginx.org/en/docs/http/ngx_http_core_module.html#location
 

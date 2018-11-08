@@ -11,5 +11,9 @@
     "workbench.iconTheme": "vscode-icons",
     "editor.fontSize": 16,
     "go.lintOnSave": "off",
-    "go.formatTool": "gofmt"
+    "go.formatTool": "gofmt",
+    "window.zoomLevel": 0,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "[java]": {},
+    "vsicons.dontShowNewVersionMessage": true
 }
