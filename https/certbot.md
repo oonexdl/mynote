@@ -5,7 +5,7 @@
 + [获取证书](#获取证书)
 + [更新证书](#更新证书)
 + [修改 webserver 配置](#修改配置)
-+ [Let's Encrypt 如何实现](#如何实现)
++ [Let's Encrypt 如何实现](#内部实现)
 
 # 简介
 
@@ -51,6 +51,6 @@ server {
 }
 ```
 
-# 如何实现
+# 内部实现
 
 TODO: https://letsencrypt.org/how-it-works/
