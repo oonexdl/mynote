@@ -43,3 +43,4 @@ go 的基础语法源自于 c，模块导入概念 Oberon，goroutine 的概念�
 
 + [go语言圣经](https://yar999.gitbooks.io/gopl-zh/content/)
 + [go语言高级编程](https://github.com/chai2010/advanced-go-programming-book)
++ [go官方博客](https://blog.golang.org)
