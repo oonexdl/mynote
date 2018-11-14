@@ -92,4 +92,4 @@ r = tty
 
 + [go语言圣经](https://yar999.gitbooks.io/gopl-zh/content/)
 + [go语言高级编程](https://github.com/chai2010/advanced-go-programming-book)
-+ [go官方博客](https://blog.golang.org)
++ [go官方博客](https://blog.golang.org/index)
