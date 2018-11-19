@@ -15,6 +15,7 @@ docker exec -it mysql mysql -uroot -p
 ```mysql
 CREATE DATABASE XXXX;
 use XXXX;
+// set 语句是为了加快插入速度
 SET autocommit=0;source the_sql_file.sql;COMMIT;
 ```
 
