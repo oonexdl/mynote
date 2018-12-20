@@ -7,8 +7,11 @@
 
 # 示例
 
-iterate.js
+### script
+
 ```js
+// iterate.js
+
 print("my_var: ", my_var);
 
 var cursor = db.user.find({phone:{"$exists":true, "$ne":""}, encryptedPhone:{"$exists":false}}).noCursorTimeout();
@@ -25,7 +28,9 @@ print("endAt: "+Date());
 cursor.close();
 ```
 
-执行
+### 执行
+
 ```
+# eval 可以取到环境变量
 mongo $DATABASE -uroot -proot --eval "var my_var='$GOPATH'" iterate.js
 ```
