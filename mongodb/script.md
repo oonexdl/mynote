@@ -31,6 +31,6 @@ cursor.close();
 ### 执行
 
 ```
-# eval 可以取到环境变量
+# --eval 可以取到环境变量
 mongo $DATABASE -uroot -proot --eval "var my_var='$GOPATH'" iterate.js
 ```
