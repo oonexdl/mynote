@@ -32,6 +32,7 @@ docker run -it \
 
 ```
 docker run -it \
+    -p 80:80 \
     -v $HOME/letsencrypt:/etc/letsencrypt \
     certbot/certbot renew \
     --dry-run
