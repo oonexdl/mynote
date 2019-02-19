@@ -42,6 +42,8 @@ kubectl describe pod {pod_name}
 kubectl scale rc {rc_name} --replicas=3
 # 获取 EndPoint 列表
 kubectl get endpoints
+# 依据 rc 创建 service
+kubectl expose rc webapp
 ```
 
 # Pod
@@ -81,4 +83,47 @@ pause 容器不易死亡，以它的状态代表整个容器组的状态。Pod �
 - clusterIp 仅作用于 Kubernetes Service 这个对象。
 - clusterIp 无法被 ping，只能结合 Service Port 组成一个具体的通信端口。
 
-使用 NodePort 可以将 service 暴露出去，通过 http://{nodeIp}:{nodePort}
+负载均衡策略:
+
+- RoundRobin: 轮询模式。
+- SessionAffinity: 基于客户端 IP 进行会话保持的模式。
+
+## 集群外访问 Pod 或 Service
+
+1. 将容器应用的端口号映射到物理机
+  - 设置 hostPort 为物理机映射端口
+  - 设置 Pod 级别的 hostNetWork=true，容器内所有端口号均映射到物理机上
+2. 将 service 的端口号映射到物理机
+  - 设置 nodePort，同时设置 Service 的类型为 NodePort
+  - 设置 LoadBalancer 映射到云服务商提供的 LoadBalancer 地址
+
+# Controller Manager
+
+## Replication Controller
+
+- 确保及集群中有且仅有 N 个 Pod 实例，N 是 RC 中定义的 Pod 副本数量。
+- 通过调整 sepc.replicas 属性实现系统扩容或收缩。
+- 通过改变 RC 的 Pod 模板来实现系统的滚动升级。
+
+## Node Controller
+
+# Scheduler
+
+## 承上启下
+
+- 承上: 负责接收 Controller Manager 创建的新 Pod，为其安排 Node 节点。
+- 启下: 目标 Node 上的 kubelet 接管后继工作，负责 Pod 的生命周期。
+
+# 网络模型
+
+## network namespace
+## veth 设备对
+## 网桥
+## Iptables/Netfilter
+## 路由
+
+# Flannel
+
+- 给每个 node 上的 docker 容器分配不冲突的 IP 地址。
+- 在这些 IP 地址之间建立覆盖网络，通过覆盖网络，数据包可以原封不动的传递到目标容器内。
+
