@@ -252,20 +252,15 @@ Ensure only ruby.taobao.org exists
 sudo gem install sass
 ```
 
-## install grunt
+## install nodej
 
 - install nodejs
 ```sh
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 nvm install v0.12.2
 nvm use 0.12.2
 ```
 
-- install grunt
-```sh
-sudo apt-get install npm
-sudo npm install -g grunt-cli
-```
 ## install supervisor
 
 - install
