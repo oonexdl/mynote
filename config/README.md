@@ -313,6 +313,14 @@ cd autojump
 wget https://github.com/stedolan/jq/releases/XXXXX
 sudo mv jq-linux64 /usr/local/bin/jq
 ```
+
+## install dive
+
+```sh
+wget https://github.com/wagoodman/dive/releases/download/v0.7.1/dive_0.7.1_linux_amd64.deb
+sudo apt install ./dive_0.7.1_linux_amd64.deb
+```
+
 ## configure software
 
 ```shell
