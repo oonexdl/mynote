@@ -44,3 +44,7 @@ default-character-set=utf8
 default-character-set=utf8
 ```
 再重新插入或导入数据
+
+### 如何处理 sql null 值
+
+https://medium.com/aubergine-solutions/how-i-handled-null-possible-values-from-database-rows-in-golang-521fb0ee267
