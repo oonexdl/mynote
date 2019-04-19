@@ -62,10 +62,9 @@ if err != nil {
 r = tty
 ```
 
+# FAQ
 
-
-
-
+## golang引用类型的值初始化为 nil，例如 []int， map[string]string，channel
 
 
 
