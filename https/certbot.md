@@ -44,11 +44,23 @@ nginx:
 
 ```nginx
 server {
+    listen 80;
+
+    server_name www.xiaodongli.me;
+
+    rewrite ^(.*)$ https://$host$1 permanent;
+}
+
+server {
     listen       443 ssl; 
-    server_name  xiaodongli.me www.xiaodongli.me;
+    server_name  www.xiaodongli.me;
 
     ssl_certificate /etc/letsencrypt/live/www.xiaodongli.me/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/www.xiaodongli.me/privkey.pem;
+    
+    location = / {
+        proxy_pass http://yourservice;
+    }
 }
 ```
 
