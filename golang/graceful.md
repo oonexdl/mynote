@@ -30,6 +30,7 @@ func main() {
 func main() {
   // 监听退出信号
   mSig := make(chan os.Signal ,1)
+  // 如不确定信号，可以使用 signal.Notify(mSig) 监听所有信号
   signal.Notify(mSig, os.Interrupt)
   // 用于传递信号
   cSig := make(chan os.Signal, 1)
