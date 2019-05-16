@@ -17,3 +17,18 @@ set -x
 # 遇见错误直接退出
 set -u
 ```
+## date
+
+```
+#当前时间戳
+nowTimestamp=$(date '+%s')
+
+#当前时间
+nowStr=$(date '+%Y-%m-%d %H:%M:%S%:z')
+
+#五分钟前时间戳
+fiveMinutesAgo=$[$nowTimestamp-300]
+
+#五分钟前时间
+fiveMinutesAgoStr=$(date --date="@$fiveMinutesAgo" '+%Y-%m-%d %H:%M:%S%:z')
+```
