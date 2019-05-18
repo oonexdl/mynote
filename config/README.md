@@ -109,13 +109,17 @@ config.json
 - install
 
 ```sh
+# ubuntu
 sudo apt-get install polipo
+# macOs
+brew install polipo
 ```
 - config
 
 ```sh
-vim /etc/polipo/config
+mv config/polipo/config ~/.polipo
 ```
+
 ```json
 logSyslog = true
 logFile = /var/log/polipo/polipo.log
@@ -131,7 +135,10 @@ serverSlots1 = 32
 - restart
 
 ```sh
+# ubuntu
 sudo /etc/init.d/polipo restart
+# macOs
+brew services restart polipos
 ```
 
 - test
@@ -150,13 +157,7 @@ sudo apt-get install wireshark
 sudo gpasswd -a $USER wireshark
 # logout and login
 ```
-## install shadowsocks-qt5
 
-```sh
-sudo add-apt-repository ppa:hzwhuang/ss-qt5
-sudo apt-get update
-sudo apt-get install shadowsocks-qt5
-```
 ## install input method
 
 ```sh
@@ -203,16 +204,6 @@ xdebug.remote_mode = req
 xdebug.remote_connect_back = 1
 xdebug.remote_autostart = 1
 ```
-## install sublime
-
-```sh
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
-```
-[Setup Guide](https://github.com/sindresorhus/editorconfig-sublime#readme)
 
 ## install vscode
 
