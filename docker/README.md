@@ -105,3 +105,26 @@ docker volume ls
 # remove all volumes not referenced with any containers
 docker prune
 ```
+
+# Dockerfile
+
+## 如何选择基础镜像
+
+alpine 还是 phusion/baseimage-docker?
+
+后者主要解决了 unix zombie process 的问题，但僵尸进程对系统的危害并不大，既不占用内存也不消耗cpu，只保留一些残余的进程信息。除此之外，还提供了 syslog-ng，sshd 等后台服务。镜像也因此变得臃肿，总之性价比略低。
+鉴于上述问题，alpine 是个更好的选择。简单，安全，体积小，不内置任何 daemon service，自带的 package 可以满足大部分依赖需求。这意味着给与了开发者更大的灵活性，keep simple，keep flexible。
+
+```
+REPOSITORY                            TAG                 IMAGE ID            CREATED             SIZE
+ubuntu                                18.04               4c108a37151f        3 days ago          64.2MB
+phusion/baseimage                     latest              166cfc3f6974        17 months ago       209MB
+alpine                                latest              4d90542f0623        2 days ago          5.58MB
+```
+
+
+
+
+
+
+
