@@ -122,8 +122,9 @@ phusion/baseimage                     latest              166cfc3f6974        17
 alpine                                latest              4d90542f0623        2 days ago          5.58MB
 ```
 
+## multi-stage builds
 
-
+https://docs.docker.com/develop/develop-images/multistage-build/
 
 
 
