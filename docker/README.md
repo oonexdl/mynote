@@ -112,8 +112,7 @@ docker prune
 
 alpine 还是 phusion/baseimage-docker?
 
-后者主要解决了 unix zombie process 的问题，但僵尸进程对系统的危害并不大，既不占用内存也不消耗cpu，只保留一些残余的进程信息。除此之外，还提供了 syslog-ng，sshd 等后台服务。镜像也因此变得臃肿，总之性价比略低。
-鉴于上述问题，alpine 是个更好的选择。简单，安全，体积小，不内置任何 daemon service，自带的 package 可以满足大部分依赖需求。这意味着给与了开发者更大的灵活性，keep simple，keep flexible。
+后者主要解决了 unix zombie process 的问题，除此之外，还提供了 syslog-ng，sshd 等后台服务。镜像也因此变得臃肿，总之性价比略低。实际上在 alpine 的较新的版本里，内置的 /sbin/tini 命令已经可以解决僵尸进程的问题。另外 alpine 镜像简单，安全，体积小，不内置任何 daemon service，自带的 package 可以满足大部分依赖需求。这意味着给与了开发者更大的灵活性，keep simple，keep flexible。
 
 ```
 REPOSITORY                            TAG                 IMAGE ID            CREATED             SIZE
