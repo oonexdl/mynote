@@ -9,6 +9,7 @@
 ## 分页
 
 使用 search_after 做深分页遍历。
+使用 scroll 同步数据。
 
 ## 别名
 
