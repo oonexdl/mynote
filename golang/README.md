@@ -62,6 +62,18 @@ if err != nil {
 r = tty
 ```
 
+# slice
+
+
+```go
+// a 存储切片首个元素内存地址
+a := make([]int, 0, 2)
+a = append(a, 1)
+a = append(a, 2)
+// 注意此时 a 的内存地址可能已发生改变，因为发生了内存扩容
+a = append(a, 3)
+```
+
 # FAQ
 
 ## golang引用类型的值初始化为 nil，例如 []int， map[string]string，channel
