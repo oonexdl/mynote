@@ -64,6 +64,7 @@ r = tty
 
 # slice
 
+here is all you need know. https://blog.golang.org/go-slices-usage-and-internals 
 
 ```go
 // a 存储切片首个元素内存地址
