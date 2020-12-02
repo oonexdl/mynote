@@ -49,6 +49,9 @@ git clone -b develop repo -o work_dir
 ```
 
 ## install Oh-My-Zsh
+
+https://github.com/ohmyzsh/ohmyzsh
+
 ```shell
 sudo apt-get install zsh curl
 zsh --version # ensure more than 4.6.9
