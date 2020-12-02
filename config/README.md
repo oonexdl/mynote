@@ -85,7 +85,7 @@ sudo sslocal -c config.json -d start
 ```
 go version:
 
-download release bin from https://github.com/shadowsocks/shadowsocks-go/releases
+download release bin from https://github.com/shadowsocks/shadowsocks-go/releases, https://github.com/shadowsocks/go-shadowsocks2
 
 ```
 shadowsocks-local -c config.json & disown
