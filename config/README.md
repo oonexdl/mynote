@@ -223,6 +223,10 @@ xdebug.remote_autostart = 1
 
 [link](https://code.visualstudio.com/docs/?dv=linux64_deb)
 
+## install vscode go debug
+
+https://github.com/golang/vscode-go/blob/master/docs/debugging.md#installation
+
 ## install nginx
 
 ```sh
