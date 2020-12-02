@@ -110,6 +110,11 @@ docker version:
 ```sh
 docker run -d --name shadowsocks -p 61209:8388 -p 61209:8388/udp -e PASSWORD=XXXXXX -e METHOD=aes-256-cfb gists/shadowsocks-libev.simple-obfs
 ```
+
+mac version:
+
+download release from https://github.com/shadowsocks/ShadowsocksX-NG/releases
+
 ## install polipo and set global proxy
 
 - install
