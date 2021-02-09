@@ -11,3 +11,5 @@ go env -w GOPROXY=https://goproxy.cn,direct
 ## troubleshooting
 
 https://github.com/golang/vscode-go/blob/master/docs/troubleshooting.md
+
+https://github.com/golang/tools/blob/master/gopls/doc/troubleshooting.md
