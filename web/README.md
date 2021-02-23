@@ -29,3 +29,5 @@ HTTP/1.1 使用长连接(keepalive)和管道技术解决了上述问题。浏览
 ### Server Push
 
 ### Compression
+
+参考: https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference
