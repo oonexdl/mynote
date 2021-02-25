@@ -1,7 +1,7 @@
 # grpc 使用规范
 
-+ [http1.1 to grpc](##http1.1 to grpc)
-+ [错误处理](##错误处理)
++ [http1.1 to grpc](#http1.1 to gRPC)
++ [错误处理](#错误处理)
 
 ## http1.1 to gRPC
 
