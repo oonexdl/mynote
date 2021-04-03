@@ -38,8 +38,8 @@ sudo apt-get install git git-gui git-extras
 git version
 
 # not use --global if just set in current repo
-git config --global user.name "seasons521"
-git config --global user.email "seasons521@126.com"
+git config --global user.name "oonexdl"
+git config --global user.email "oonexdl@gmail.com"
 git config --global alias.s status
 git config --global alias.d diff
 git config --global alias.c checkout
