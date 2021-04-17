@@ -1,3 +1,3 @@
 # Mynote
 
-you know, for record
+you know, just for tech record
