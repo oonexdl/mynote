@@ -1,3 +1,3 @@
 # Mynote
 
-技术日常归档
+you know, for record
