@@ -12,3 +12,7 @@
 ## 7层代理
 
 7 层代理工作在应用层。客户端先跟 lb 建立连接，lb 读取并解析数据包内容(http header、url等)后，按照一定规则(例如 nginx 的 location 匹配)再转发到后端 server。
+
+## 参考
+
+https://www.nginx.com/resources/glossary/layer-4-load-balancing/
