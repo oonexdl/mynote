@@ -1,5 +1,14 @@
 # rsa
 
+## generate
+
+```
+# 私钥
+openssl genrsa -out keypair.pem 2048
+# 从私钥生成公钥
+openssl rsa -in keypair.pem -pubout -out publickey.crt
+```
+
 ## PKCS1v15
 
 ### encrypt
