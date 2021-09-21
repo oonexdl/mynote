@@ -79,6 +79,8 @@ docker rmi $(docker images -q --filter dangling=true | head -n 10)
 # -e set environment varaibles
 # --network set container network mode, host means using current Host
 docker run --it --rm -v localPath:containerPath -w currentWorkDir -p 9000:9001 -e MONGOURL=${MONGOURL} --network host ${IMAGE} bash
+# list all contaniner id with status is exited
+docker ps -aq --filter status=exited
 # list all containers with exited code is 0, more detailed just `RFTM`
 docker ps -a --format "{{ .Status }} {{ .Names }}" --filter exited=0
 # scan container detailt info
