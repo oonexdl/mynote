@@ -67,6 +67,8 @@ docker images --format "{{ .ID | .Repository | .Tag | .Size }}"
 docker rmi ${IMAGEIDS}
 # rm 10 unused images
 docker rmi $(docker images -q --filter dangling=true | head -n 10)
+# create tag from source image
+docker image tag ${source} ${tag}
 ```
 
 ### Manage Containers
