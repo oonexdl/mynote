@@ -120,6 +120,8 @@ download release from https://github.com/shadowsocks/ShadowsocksX-NG/releases
 
 ## install shadowsocksr-cli in linux
 
+https://github.com/TyrantLucifer/ssr-command-client
+
 ```sh
 pip(pip3) install shadowsocksr-cli
 # 列出可用节点
