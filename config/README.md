@@ -118,6 +118,20 @@ mac version:
 
 download release from https://github.com/shadowsocks/ShadowsocksX-NG/releases
 
+## install shadowsocksr-cli in linux
+
+```sh
+pip(pip3) install shadowsocksr-cli
+# 列出可用节点
+shadowsocksr-cli -l
+# 通过ssr地址添加远程节点
+shadowsocksr-cli --add-ssr ssr_url
+# 开启socks5代理
+shadowsocksr-cli -s ssr_id -p 1080
+# 开启http代理(有bug待修复，可用polipo替代)
+shadowsocksr-cli --http start --http-port 1087
+```
+
 ## install polipo and set global proxy
 
 - install
