@@ -132,6 +132,8 @@ shadowsocksr-cli --add-ssr ssr_url
 shadowsocksr-cli -s ssr_id -p 1080
 # 开启http代理(有bug待修复，可用polipo替代)
 shadowsocksr-cli --http start --http-port 1087
+# 设置代理
+https_proxy=socks5://127.0.0.1:1087 http_proxy=socks5://127.0.0.1:1087
 ```
 
 ## install polipo and set global proxy
