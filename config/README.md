@@ -43,6 +43,7 @@ git config --global user.email "oonexdl@gmail.com"
 git config --global alias.s status
 git config --global alias.d diff
 git config --global alias.c checkout
+git config --global alias.p pull
 
 # fetch code
 git clone -b develop repo -o work_dir
