@@ -151,11 +151,12 @@ brew install polipo
 
 ```sh
 mv config/polipo/config ~/.polipo
+# http://localhost:8123/polipo/config 查看配置
 ```
 
 ```json
 logSyslog = true
-logFile = /var/log/polipo/polipo.log
+// logFile = /var/log/polipo/polipo.log macOs注释掉
 proxyAddress = "0.0.0.0"
 socksParentProxy = "127.0.0.1:1080"
 socksProxyType = socks5
