@@ -69,6 +69,10 @@ docker rmi ${IMAGEIDS}
 docker rmi $(docker images -q --filter dangling=true | head -n 10)
 # create tag from source image
 docker image tag ${source} ${tag}
+# cp folder from image
+id=$(docker create image)
+docker cp $id:/path path
+docker rm $id
 ```
 
 ### Manage Containers
